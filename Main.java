@@ -65,6 +65,10 @@ class Main {
 
     }
 
+    // /u2655 is a ♕ <- unicode
+    // /u265A is a ♚ <- unicode 🧍
+
+
   }
 
   public static String getSuit(Random rand, String suit) {
@@ -74,7 +78,7 @@ class Main {
         suit = "\u2660";
         break;
       case 1:
-        suit = "\u2665";
+        suit = "\u2665"; // u2665
         break;
       case 2:
         suit = "\u2663";
