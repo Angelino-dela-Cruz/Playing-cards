@@ -43,14 +43,16 @@ class Main {
     }
     // (40,80)
     g.setFont(myFont);
+    // vvv adjusts the positioning for 'larger' strings
     if (value == "10") {
       g.drawString(value, x + 5, y + 40);
     } else {
       g.drawString(value, x + 20, y + 40);
     }
-
+    
     g.drawString(suit, x + 15, y + 80); // (35,120)
     g.setFont(new Font("sherif", Font.BOLD, -40));
+    // vv also adjusts the strings
     if (value == "10") {
       g.drawString(value, x + 195, y + 260);
       g.drawString(suit, x + 187, y + 216);
@@ -58,6 +60,7 @@ class Main {
       g.drawString(value, x + 187, y + 260);
       g.drawString(suit, x + 192, y + 216);
     }
+    // parses the string to an int
     if (value != "Q" && value != "K" && value != "J" && value != "A") {
       int numSuits = Integer.parseInt(value);
       System.out.println(numSuits);
