@@ -1,3 +1,8 @@
+// for collaborators/team-members ignore the numerous class files and focus on the ".java" file(s)
+
+
+
+
 # Playing Cards
 The goal of this project is to excersise some basic skill in Java and also to show you can problem solve without a step-by-step spec to build from.
 
