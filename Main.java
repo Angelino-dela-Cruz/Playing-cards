@@ -34,7 +34,6 @@ class Main {
       g.setColor(Color.BLACK);
     }
 
-    
     Font myFont = new Font("sherif", Font.BOLD, 40);
 
     if (value == "A") {
@@ -43,6 +42,7 @@ class Main {
     }
     // (40,80)
     g.setFont(myFont);
+
     // vvv adjusts the positioning for 'larger' strings
     if (value == "10") {
       g.drawString(value, x + 5, y + 40);
@@ -51,7 +51,8 @@ class Main {
     }
     
     g.drawString(suit, x + 15, y + 80); // (35,120)
-    g.setFont(new Font("sherif", Font.BOLD, -40));
+    g.setFont(new Font("sherif", Font.BOLD, -40)); // for the upside down portion
+
     // vv also adjusts the strings
     if (value == "10") {
       g.drawString(value, x + 195, y + 260);
@@ -60,12 +61,20 @@ class Main {
       g.drawString(value, x + 187, y + 260);
       g.drawString(suit, x + 192, y + 216);
     }
+
     // parses the string to an int
     if (value != "Q" && value != "K" && value != "J" && value != "A") {
       int numSuits = Integer.parseInt(value);
       System.out.println(numSuits);
-      // for(int i = 0; i > )
 
+    }
+
+    if(value == "Q") {
+      g.setFont(new Font("sherif", Font.BOLD, 65));
+      g.drawString("\u2655", x + 67, y + 165);
+    } else if(value == "K") {
+      g.setFont(new Font("sherif", Font.PLAIN, 65));
+      g.drawString("\u265a", x + 67, y + 165);
     }
 
     // /u2655 is a ♕ <- unicode
